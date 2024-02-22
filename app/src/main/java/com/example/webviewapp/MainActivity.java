@@ -1,11 +1,16 @@
 package com.example.webviewapp;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
+import android.graphics.RenderEffect;
+import android.graphics.Shader;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         myWebView.setWebViewClient(new WebViewClient());
         // 加载指定网页
         myWebView.loadUrl("https://www.bing.com");
+        // 高斯模糊效果
+        //myWebView.setRenderEffect(RenderEffect.createBlurEffect(20,20,Shader.TileMode.CLAMP));
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
